@@ -85,7 +85,7 @@ public @ResponseBody String kakaoCallback(String code){
         new HttpEntity<>(params,headers);
 
     // Http 요청하기
-    ResponseEntity<Strring> response = rt.exchange(
+    ResponseEntity<String> response = rt.exchange(
             "https://kauth.kakao.com/oauth/token",
             HttpMethod.POST,
             kakaoTokenRequest,
