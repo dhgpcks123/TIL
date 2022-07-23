@@ -74,8 +74,8 @@ xxxxx.yyyyy.zzzzz
 클라이언트                          서버
         ---------------------->>
         로그인 시도
-                                header - rsa
-                                payload - { username: chan }
+                                header - rsa  => base64암호화
+                                payload - { username: chan }  => base64암호화
                                 signiture - header+payload
                                             개인키로 암호화
                                 토큰
