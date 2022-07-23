@@ -1,0 +1,9 @@
+## DelegatingFilterProxy
+
+spring은 서블릿 컨테이너 생명주기와 spring의 ApplicationContext 사이의 브릿징을 허용하는
+DelegatingFilterProxy라는 필터 구현을 제공한다
+(브릿징?)
+
+서블릿 컨테이너는 자체 표준을 사용해서 필터를 등록할 수 있지만
+스프링에서 정의한 빈을 인식하지 못한다
+그런데 DelegatingFilterProxy는 스프링 빈을 관리하는 표준 서블릿 필터를 구현하고 있으며

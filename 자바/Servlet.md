@@ -10,9 +10,15 @@
 - html을 사용하여 응답
 - java thread 이용 하여 동작
 - MVC 패턴의 controller
-- HTML 변경 시 servlet 재검파일 필요
+- HTML 변경 시 servlet 재컴파일 필요
 
 ### 동작방식
 
 ![servlet동작방식](img/servlet동작방식.png)
-![servlet동작방식2](/Users/dhgpcks/Downloads/servlet동작방식.png)
+
+1. 사용자가 URL 입력 시 HTTP Request - Servlet Container로 전송
+2. 요청받은 Servlet Container는 HttpServletRequest, HttpServletResponse 객체 생성
+3. 사용자가 요청한 URL이 어느 서블릿에 대한 요청인지 찾음
+4. 해당 서블릿에서 service 메서드 호출 - doGet 또는 doPost 호출
+5. 동적 페이지 생성 -> HttpServletResponse 객체 응답
+6. HttpServletRequest, HttpServletResponse 객체 소멸
